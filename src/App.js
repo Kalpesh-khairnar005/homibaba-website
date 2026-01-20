@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import Services from "./components/Services";
+import ContactForm from "./components/ContactForm";
+import LoginForm from "./components/LoginForm";
+import "./App.css";
+import BookingForm from "./components/BookingForm";
+import ProtectedRoute from './components/ProtectedRoute';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <HeroSection />
+      <Services />
+      <ContactForm />
+      <LoginForm />
     </div>
   );
 }
+<Route path="/booking" element={
+  <ProtectedRoute>
+    <BookingForm />
+  </ProtectedRoute>
+} />
+
 
 export default App;

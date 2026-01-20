@@ -1,0 +1,48 @@
+/* src/components/ServiceModal.css */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-form input {
+    margin-bottom: 1rem;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .modal-form button {
+    padding: 0.6rem;
+    border: none;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .modal-form button[type="button"] {
+    background-color: #777;
+  }
+  
